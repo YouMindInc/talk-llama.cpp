@@ -13,7 +13,7 @@ GGML_METAL_EMBED_LIBRARY=ON
 GGML_BLAS_DEFAULT=ON
 GGML_METAL_USE_BF16=ON
 GGML_OPENMP=OFF
-BUILD_STATIC_XCFRAMEWORK=${BUILD_STATIC_XCFRAMEWORK:-OFF}
+BUILD_STATIC_XCFRAMEWORK=ON
 
 COMMON_C_FLAGS="-Wno-macro-redefined -Wno-shorten-64-to-32 -Wno-unused-command-line-argument -g"
 COMMON_CXX_FLAGS="-Wno-macro-redefined -Wno-shorten-64-to-32 -Wno-unused-command-line-argument -g"
@@ -137,6 +137,7 @@ framework module TalkLlama {
     link framework "Accelerate"
     link framework "Metal"
     link framework "Foundation"
+    link framework "CoreML"
 
     export *
 }
