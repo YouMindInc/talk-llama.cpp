@@ -130,6 +130,7 @@ framework module TalkLlama {
     header "ggml-metal.h"
     header "ggml-cpu.h"
     header "ggml-blas.h"
+    header "ggml-opt.h"
     header "gguf.h"
 
     link "c++"
